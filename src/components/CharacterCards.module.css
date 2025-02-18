@@ -1,5 +1,5 @@
 .characters {
-  --auto-grid-min-size: 16rem;
+  --auto-grid-min-size: 26rem;
   display: grid;
   grid-template-columns: repeat(
     auto-fill,

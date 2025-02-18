@@ -1,19 +1,29 @@
 .card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #fff;
+  background: rgb(32, 35, 41);
+  color: rgb(255, 152, 0);
+  height: 100%;
+  cursor: pointer;
 }
 
 .card img {
-  width: 100%;
-  height: auto;
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card div {
-  padding: 10px;
+  padding: 15px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  text-align: left;
 }
 
 .card h2 {
@@ -22,6 +32,11 @@
 }
 
 .card p {
-  margin: 0.5em 0 0;
-  color: #666;
+  margin: 0;
+  color: #b4b2b2;
+}
+
+.firstSeen:hover {
+  color: #747bff;
+  font-weight: 600;
 }
