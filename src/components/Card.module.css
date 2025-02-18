@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card div {
+  padding: 10px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.card p {
+  margin: 0.5em 0 0;
+  color: #666;
+}
