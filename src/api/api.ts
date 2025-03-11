@@ -7,3 +7,9 @@ export const fetchCharacters = async (page: number = 1) => {
   const data = await res.json();
   return data;
 };
+
+export const fetchEpisodes = async (url: string) => {
+  const res = await fetch(url);
+  const data = await res.json();
+  return data.name;
+};
