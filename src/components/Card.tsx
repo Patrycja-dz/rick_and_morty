@@ -2,6 +2,7 @@ import { Character } from "../models/characters";
 import styles from "./Card.module.css";
 import { FC, forwardRef, useEffect, useState } from "react";
 import { fetchEpisodes } from "../api/api";
+
 type CardProps = {
   item: Character;
 };
@@ -14,6 +15,7 @@ const Card: FC<CardProps> = forwardRef(({ item }, ref) => {
       });
     }
   }, [item]);
+
   const checkStatus = (status: string) => {
     if (status === "Alive") {
       return "🟢";
