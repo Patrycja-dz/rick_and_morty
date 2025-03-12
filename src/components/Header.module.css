@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Get Schwifty";
+  src: url("../../assets/fonts/Ricky-and-Morty-font.ttf");
+}
+
+.header {
+  font-family: "Get Schwifty", sans-serif;
+  background-color: #0e0e0e;
+  padding: 1.5rem;
+}
+
+.header p {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  background: linear-gradient(
+    90deg,
+    #c1f762,
+    #c7fa6c,
+    #314e1c,
+    #69ad53,
+    #7cbc6c,
+    #365829
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -7px -6px 0 yellow, -6px -2px 0 #c7fa6c;
+}
