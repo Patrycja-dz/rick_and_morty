@@ -3,28 +3,50 @@ import styles from "./Sidebar.module.css";
 
 const Sidebar = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+
   const toggleSidebarVisibility = () => {
     setIsSidebarVisible(!isSidebarVisible);
   };
+
   return (
-    <div
-      className={`${styles.sidebar} ${
-        isSidebarVisible ? styles.slideSidebar : null
-      }`}
-    >
+    <div className={styles.container}>
+      <nav
+        className={`${styles.sidebar} ${
+          isSidebarVisible ? styles.sidebarVisible : styles.sidebarHidden
+        }`}
+      >
+        <ul>
+          <li>
+            <a href="/">Lorem</a>
+          </li>
+          <li>
+            <a href="/">ipsum</a>
+          </li>
+          <li>
+            <a href="/">dolor</a>
+          </li>
+          <li>
+            <a href="/">sit</a>
+          </li>
+          <li>
+            <a href="/">ament</a>
+          </li>
+        </ul>
+      </nav>
+
       <button
         onClick={toggleSidebarVisibility}
-        className={`${isSidebarVisible ? styles.morty : styles.rick}`}
+        className={`${styles.sidebarButton} ${
+          isSidebarVisible ? styles.buttonActive : ""
+        }`}
       >
-        <span className="sr-only">Close</span>
+        <span
+          className={isSidebarVisible ? styles.iconHidden : styles.iconVisible}
+        ></span>
+        <span
+          className={isSidebarVisible ? styles.iconVisible : styles.iconHidden}
+        ></span>
       </button>
-      <nav>
-        <li>Lorem</li>
-        <li>Ipsum</li>
-        <li>Dolor</li>
-        <li>Sit</li>
-        <li>Amet</li>
-      </nav>
     </div>
   );
 };
