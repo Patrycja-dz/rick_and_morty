@@ -1,0 +1,98 @@
+.container {
+  position: relative;
+}
+
+.sidebar {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fffdfd;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  border-right: 3px solid #0e0e0e;
+  transition: transform 0.4s ease-in-out;
+}
+
+.sidebarVisible {
+  transform: translateX(0);
+}
+
+.sidebarHidden {
+  transform: translateX(-100%);
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding-block: clamp(1rem, 5vw, 2rem);
+}
+
+.sidebarButton {
+  z-index: 9999;
+  background-color: #fff;
+  aspect-ratio: 1;
+  width: 3rem;
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  border: 3px solid #0e0e0e;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 1rem 1.7rem;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  transition: transform 0.4s ease-in-out;
+}
+
+.sidebarButton span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebarButton span:first-child {
+  background-image: url("../../assets/rick-sanchez.png");
+}
+
+.sidebarButton span:last-child {
+  background-image: url("../../assets/morty.png");
+}
+
+.iconVisible {
+  transform: translateX(0);
+}
+
+.iconHidden {
+  transform: translateX(100%);
+}
+
+@media (min-width: 35em) {
+  .sidebar {
+    width: 25rem;
+  }
+
+  .sidebarButton {
+    border-left: none;
+    left: 0;
+  }
+
+  .buttonActive {
+    transform: translateX(25rem);
+  }
+}
